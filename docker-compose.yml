@@ -3,7 +3,7 @@ version: '3.4'
 
 x-common:
   &common
-  image: apache/airflow:${AIRFLOW_VERSION}-python3.8
+  image: airflow:2.5.1-python3.8-2
   user: "${AIRFLOW_UID}:0"
   env_file:
     - .env
@@ -13,6 +13,7 @@ x-common:
     - ./plugins:/opt/airflow/plugins
     - /var/run/docker.sock:/var/run/docker.sock
     - ./config/webserver_config.py:/opt/airflow/webserver_config.py
+    - ./data:/opt/airflow/data
 
 x-depends-on:
   &depends-on

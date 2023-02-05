@@ -20,6 +20,9 @@ Edit the `AIRFLOW_VERSION` variable in the `.env` file.
 ### Change Airflow configurations
 Edit the Environment variables in the `.env` file.
 
+### Add GCP connection
+Add the JSON key file in data. Then add a GCP connection named `google_cloud_default` with the `project_id` and the `Keyfile Path`.
+
 
 ## Stop Airflow
 
